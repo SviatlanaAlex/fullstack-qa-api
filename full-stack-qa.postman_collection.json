@@ -369,7 +369,7 @@
 		},
 		{
 			"key": "token",
-			"value": "ADD YOUR TOKEN",
+			"value": "${{ secrets.TOKEN }}",
 			"type": "string"
 		},
 		{
