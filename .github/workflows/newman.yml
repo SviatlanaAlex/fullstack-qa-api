@@ -14,7 +14,7 @@ jobs:
         run: npm install -g newman newman-reporter-htmlextra
       - name: Run Newman with Htmlextra Reporter
         run: |
-          newman run "full-stack-qa.postman_collection.json" \
+          newman run "full-stack-qa.postman_collection.json" --env-var "token=${{ secrets.TOKEN }}" \
             --reporters cli,htmlextra \
             --reporter-htmlextra-export report.html
       - name: Upload Report
